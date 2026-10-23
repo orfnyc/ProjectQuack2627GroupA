@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cb64o667r3b3d"]
+
+[ext_resource type="PackedScene" uid="uid://j8d0baqo8sow" path="res://Gyms/Oliver/DemoOct22/PlayerOct22.tscn" id="1_l7lig"]
+[ext_resource type="PackedScene" uid="uid://dc66tof6ou3xp" path="res://Gyms/Oliver/DemoOct22/MapOct22.tscn" id="1_t417g"]
+
+[node name="DemoOct22" type="Node2D" unique_id=1494578779]
+
+[node name="MapOct22" parent="." unique_id=625076702 instance=ExtResource("1_t417g")]
+
+[node name="PlayerOct22" parent="." unique_id=218206415 instance=ExtResource("1_l7lig")]
+position = Vector2(586, 354)
+scale = Vector2(0.5, 0.5)
