@@ -11,9 +11,8 @@ const WALL_SLIDE: float = 50.0
 
 @onready var camera: Camera2D = $Camera2D
 
-var last_direction: int = 0
-
 func _physics_process(delta: float) -> void:
+	# Apply Gravity
 	velocity.y += GRAVITY * delta
 	if is_on_wall(): 
 		if Input.is_action_pressed("left_test") or Input.is_action_pressed("right_test"):
@@ -21,10 +20,8 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_pressed("left_test"):
 		velocity.x -= WALK_ACCELERATION * delta
-		last_direction = -1
 	if Input.is_action_pressed("right_test"):
 		velocity.x += WALK_ACCELERATION * delta
-		last_direction = 1
 	if is_on_floor() and not (Input.is_action_pressed("left_test") or Input.is_action_pressed("right_test")):
 		if velocity.x > 0:
 			velocity.x -= WALK_DECCELERATION * delta
@@ -39,12 +36,10 @@ func _physics_process(delta: float) -> void:
 		
 	# Wall Jump
 	if is_on_wall_only() and Input.is_action_just_pressed("up_test"):
-		velocity.x -= last_direction * JUMP_IMPULSE
+		velocity.x += get_wall_normal().x * JUMP_IMPULSE
 		velocity.y = -JUMP_IMPULSE
-		last_direction *= -1
 	
 	velocity.x = clampf(velocity.x, -MAX_SPEED, MAX_SPEED)
-	last_direction_signal.emit(last_direction)
 	move_and_slide()
 
 func set_camera_bounds(top_right: Vector2i, bottom_left: Vector2i) -> void:
