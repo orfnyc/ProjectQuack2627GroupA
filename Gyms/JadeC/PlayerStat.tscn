@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cja8l37nxfuuv"]
+
+[ext_resource type="Script" uid="uid://do533hb0fv6uw" path="res://Gyms/JadeC/player_stat.gd" id="1_wuskr"]
+
+[node name="PlayerStat" type="Node2D" unique_id=1183348781]
+script = ExtResource("1_wuskr")

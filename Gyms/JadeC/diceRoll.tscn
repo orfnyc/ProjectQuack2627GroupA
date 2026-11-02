@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://5uk50hbojew4"]
+
+[ext_resource type="Script" uid="uid://gajggy8wpgym" path="res://Gyms/JadeC/dice_roll.gd" id="1_6c0lh"]
+[ext_resource type="Texture2D" uid="uid://5e5mm631tkl7" path="res://icon.svg" id="2_fxulc"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cavft"]
+
+[node name="DiceRoll" type="Node2D" unique_id=489052385]
+script = ExtResource("1_6c0lh")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1687903310]
+offset_right = 1153.0
+offset_bottom = 651.0
+texture = ExtResource("2_fxulc")
+
+[node name="RollAction" type="Button" parent="." unique_id=784753289]
+offset_left = 465.0
+offset_top = 254.0
+offset_right = 685.0
+offset_bottom = 411.0
+icon = SubResource("PlaceholderTexture2D_cavft")
+
+[connection signal="pressed" from="RollAction" to="." method="_on_roll_action_pressed"]
