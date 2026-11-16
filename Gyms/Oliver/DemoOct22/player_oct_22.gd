@@ -4,10 +4,11 @@ const SPEED: float = 250.0
 
 var dash_timer_max: float = 0.1
 var dash_timer: float = 0.0
+var reset_position: Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	reset_position = position
 
 ## Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:
@@ -31,3 +32,6 @@ func _physics_process(delta: float) -> void:
 		velocity *= 10
 		dash_timer -= delta
 	move_and_slide()
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+	position = reset_position
