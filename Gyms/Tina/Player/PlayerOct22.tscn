@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://5e5mm631tkl7" path="res://icon.svg" id="1_f0b46"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1m5q4"]
-size = Vector2(132, 132)
+size = Vector2(65, 66)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ms1oj"]
-size = Vector2(128, 128)
+size = Vector2(65, 65)
 
 [node name="PlayerOct22" type="CharacterBody2D" unique_id=218206415]
 script = ExtResource("1_84q6h")
@@ -16,12 +16,16 @@ script = ExtResource("1_84q6h")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1851262818]
+position = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_1m5q4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=789444156]
+position = Vector2(1.0000038, 0)
+scale = Vector2(0.515625, 0.5078125)
 texture = ExtResource("1_f0b46")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=600283115]
+position = Vector2(-1, -1)
 shape = SubResource("RectangleShape2D_ms1oj")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1312547135]
