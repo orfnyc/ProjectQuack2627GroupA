@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://n1bs1siuioof" path="res://Gyms/Annette/TITLESCREEN/2688a588588c6a4d8cff31de472e7fa3.jpg" id="5_v8v6f"]
 [ext_resource type="Texture2D" uid="uid://ctkp1ihwy4t8h" path="res://Gyms/Annette/TITLESCREEN/Untitled27_20261117151610.webp" id="6_rdw3q"]
 [ext_resource type="Texture2D" uid="uid://c25g582ityxtm" path="res://Gyms/Annette/TITLESCREEN/Untitled28_20261117154010.webp" id="7_v8v6f"]
+[ext_resource type="Script" uid="uid://dawyb6l7uyqgx" path="res://Gyms/Annette/TITLESCREEN/button_script.gd" id="8_rdw3q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e4q25"]
 texture = ExtResource("1_cla5x")
@@ -5143,5 +5144,6 @@ layout_mode = 2
 layout_mode = 2
 text = "New Game
 "
+script = ExtResource("8_rdw3q")
 
 [node name="TESTANIMATIONPLAYER" type="AnimationPlayer" parent="." unique_id=70963939]
